@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 .App {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,4 +31,37 @@ html,body,#root {
 .balance{
  
   font-weight: 800;
+}
+
+.users-wraper {
+  box-sizing: border-box;
+  width: max-content;
+  height: auto;
+  display: grid;
+}
+
+
+@media  screen and (max-width: 850px){
+  .total-balance{
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
+@media  screen and (max-width: 650px){
+  .total-balance{
+    font-size: 1.8rem;
+  }
+  .users-wraper{
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+  .users{
+    font-size: 1.5rem;
+    gap: 0.3rem;
+  }
+}
+@media  screen and (max-width: 350px){
+  .users{
+    flex-direction: column;
+  }
 }

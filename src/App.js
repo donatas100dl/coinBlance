@@ -36,6 +36,10 @@ function App() {
       getAccountMoney()
     }, 40000)
 
+
+    console.log(205 - (205*(10/100)))
+
+
     getAccountMoney()
   }, []);
 
@@ -135,15 +139,17 @@ function App() {
   return (
     <div className="App">
       <div className="total-balance">
-        <span className="name">Total balacne - </span>
+        <span className="name">Total balacne: </span>
         <span className="balance">{totalBalance.toLocaleString()}</span>
       </div>
+      <div className="users-wraper">
       {usersMoney.map((acc) => (
         <div className="users">
-          <span className="name">{`user ${acc.user}:`}</span>
+          <span className="name">{`${acc.user}:`}</span>
           <span className="balance">{`${acc.money.toLocaleString()}`}</span>
         </div>
       ))}
+      </div>
     </div>
   );
 }
