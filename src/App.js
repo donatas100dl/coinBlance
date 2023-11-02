@@ -47,9 +47,10 @@ function App() {
   const getAccountMoney = () => {
         //user 1
         axios.get("https://zenith-confused-blue.glitch.me/accounts").then((res) => {
+          console.log(res)
           let money = 0;
           res.data.farmer_accounts.map((account) =>{
-            money = money + parseInt(account.purse)
+            money = money + parseInt(account.balance_int)
           })
           setUsersMoney((prev) => prev.map((userMoney) => {
             if (userMoney.user === "donatas") {
@@ -64,7 +65,7 @@ function App() {
 
         let money = 0;
         res.data.farmer_accounts.map((account) =>{
-          money = money + parseInt(account.purse)
+          money = money + parseInt(account.balance_int)
         })
         setUsersMoney((prev) => prev.map((userMoney) => {
           if (userMoney.user === "auris") {
@@ -78,7 +79,7 @@ function App() {
 
         let money = 0;
         res.data.farmer_accounts.map((account) =>{
-          money = money + parseInt(account.purse)
+          money = money + parseInt(account.balance_int)
         })
         setUsersMoney((prev) => prev.map((userMoney) => {
           if (userMoney.user === "marijus") {
@@ -92,7 +93,7 @@ function App() {
 
         let money = 0;
         res.data.farmer_accounts.map((account) =>{
-          money = money + parseInt(account.purse)
+          money = money + parseInt(account.balance_int)
         })
         setUsersMoney((prev) => prev.map((userMoney) => {
           if (userMoney.user === "enrikas") {
@@ -106,7 +107,7 @@ function App() {
 
         let money = 0;
         res.data.farmer_accounts.map((account) =>{
-          money = money + parseInt(account.purse)
+          money = money + parseInt(account.balance_int)
         })
         setUsersMoney((prev) => prev.map((userMoney) => {
           if (userMoney.user === "paulius") {
